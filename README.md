@@ -1,9 +1,9 @@
 # HouYi
 
-This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention.
+This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project segment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
 
 ## Citation
-Please cite our paper if you use our code in your research:
+Please cite the original paper if you use their code in your research:
 ```
 @misc{liu2023prompt,
       title={Prompt Injection attack against LLM-integrated Applications}, 
@@ -216,7 +216,9 @@ The above is an example of an attack intention that asks the LLM-integrated appl
 With the harness and attack intention, you can import them in the ``main.py`` and run the prompt injection to attack the LLM-integrated application.
 
 
-## Contact the Contributors!
+
+
+## Contact the Original Contributors!
 
 - Yi Liu - yi009@e.ntu.edu.sg
 - Gelei Deng - gelei.deng@ntu.edu.sg
