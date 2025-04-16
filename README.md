@@ -28,7 +28,7 @@ Please cite the original paper if you use their code in your research:
 Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
 Once the .zip folder has been downloaded you must change the directory to the project folder directory:
 ```bash
-cd HouYi-CS4371-Project-master
+cd YOUR-PATH-TO-HouYi-CS4371-Project-master
 ```
 Next install requirements in the command prompt:
 ```bash
