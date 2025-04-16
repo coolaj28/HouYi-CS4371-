@@ -24,7 +24,7 @@ Please cite the original paper if you use their code in your research:
 - [More Examples](#more-examples)
 - [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
 
-##Group8
+## Group8
 Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
 Once the .zip folder has been downloaded you must change the directory to the project folder directory:
 ```bash
