@@ -34,7 +34,7 @@ Next install requirements in the command prompt:
 ```bash
 pip install -r requirements.txt
 ```
-Navigate to the project folder and locate the .env file. Add API keys to the the env file and save.
+Navigate to the project folder and locate the .env file. Add API keys to the the .env file and save.
 ```bash
 PAREA_API_KEY = ''
 BOTSONIC_API_KEY=''
