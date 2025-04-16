@@ -34,8 +34,8 @@ Please cite the original paper if you use their code in your research:
 
 ## Table of Contents
 
-- [Simulate GROUP 8s Prompt Injection](#Group8)
 - [Introduction of HouYi](#HouYi)
+- [Simulate GROUP 8s Prompt Injection](#Group8)
 - [Setup](#setup)
 - [Demo](#demo)
 - [More Examples](#more-examples)
