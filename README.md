@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Introduction of HouYi](#HouYi)
+- [Simulate GROUP 8s Prompt Injection](#Group8)
+- [Setup](#setup)
+- [Demo](#demo)
+- [More Examples](#more-examples)
+- [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
+
+
+
 # HouYi
 
 This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. Related Work
@@ -32,14 +43,7 @@ Please cite the original paper if you use their code in your research:
 }
 ```
 
-## Table of Contents
 
-- [Introduction of HouYi](#HouYi)
-- [Simulate GROUP 8s Prompt Injection](#Group8)
-- [Setup](#setup)
-- [Demo](#demo)
-- [More Examples](#more-examples)
-- [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
 
 ## Group8
 Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
