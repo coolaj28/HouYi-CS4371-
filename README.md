@@ -1,6 +1,6 @@
 # HouYi
 
-This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project in a seperatesegment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
+This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project in a seperate segment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
 
 ## Citation
 Please cite the original paper if you use their code in your research:
@@ -24,7 +24,7 @@ Please cite the original paper if you use their code in your research:
 - [More Examples](#more-examples)
 - [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
 
-## Group8
+## Group 8
 Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
 Once the .zip folder has been downloaded you must change the directory to the project folder directory:
 ```bash
