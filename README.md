@@ -1,6 +1,6 @@
 # HouYi
 
-This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project segment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
+This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project in a seperatesegment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
 
 ## Citation
 Please cite the original paper if you use their code in your research:
@@ -17,14 +17,36 @@ Please cite the original paper if you use their code in your research:
 
 ## Table of Contents
 
+- [Simulate GROUP 8s Prompt Injection](#Group8)
 - [Introduction of HouYi](#HouYi)
 - [Setup](#setup)
 - [Demo](#demo)
 - [More Examples](#more-examples)
 - [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
 
+##Group8
+Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
+Once the .zip folder has been downloaded you must change the directory to the project folder directory:
+```bash
+cd HouYi-CS4371-Project-master
+```
+Next install requirements in the command prompt:
+```bash
+pip install -r requirements.txt
+```
+Navigate to the project folder and locate the .env file. Add API keys to the the env file and save.
+```bash
+PAREA_API_KEY = ''
+BOTSONIC_API_KEY=''
+OPENAI_API_KEY=''
+```
+Finally run the prompt injection in command prompt:
+```bash
+python write_sonic_main.py
+```
+
 ## Setup
-Please install the following packages and make sure you have Python 3.8+ installed:
+Please install the following packages(if you haven't already) and make sure you have Python 3.8+ installed:
 ```bash
 pip install -r requirements.txt
 ```
