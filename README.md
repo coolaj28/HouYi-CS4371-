@@ -22,7 +22,7 @@ This paper introduces and categorizes a novel class of Indirect Prompt Injection
 
 Our fork of HouYi extends its prompt injection capabilities to simulate indirect and user-agnostic injection vectors inspired by the scenarios outlined in Greshake et al.’s work. By integrating these insights:
 
-We've customized harnesses that simulate passive and hidden retrieval-based injections.
+We've customized a test that simulate passive and hidden retrieval-based injections.
 
 We've created test cases that mimic encoded prompts, email-based attacks, and memory-persistent payloads described in the IPI taxonomy.
 
