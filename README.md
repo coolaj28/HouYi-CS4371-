@@ -60,6 +60,7 @@ Navigate to the project folder and locate the .env file. Add API keys to the the
 PAREA_API_KEY = ''
 BOTSONIC_API_KEY=''
 OPENAI_API_KEY=''
+FOREFRONT_API_KEY = ''
 ```
 Finally run the prompt injection in command prompt:
 ```bash
