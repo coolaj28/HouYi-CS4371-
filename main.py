@@ -12,6 +12,8 @@ from harness.base_harness import Harness
 from intention.base_intention import Intention
 from intention.content_manipulation import ContentManipulation 
 from intention.information_gathering import InformationGathering
+from intention.run_command import RunCommand
+from intention.sql_injection import SqlInjection
 from intention.prompt_leakage import PromptLeakage
 from intention.spam_generation import SpamGeneration
 from intention.write_code import WriteCode
@@ -25,10 +27,10 @@ from example_apps.parea_ai import PareaHarness
 logger = loguru.logger
 
 # Define constants for optimization process
-max_iteration = 50
-max_crossover = 0.1
+max_iteration = 2   
+max_crossover = 0.1  
 max_mutation = 0.5
-max_population = 10
+max_population = 5
 
 
 def inject(intention: Intention, application_harness: Harness) -> Chromosome:
@@ -47,8 +49,8 @@ def inject(intention: Intention, application_harness: Harness) -> Chromosome:
 
 def main():
     # Initialize prompt injection intention and harness
-    content_manipulation = ContentManipulation()
-    application_harness = OpenAIHarness()
+    content_manipulation = RunCommand()
+    application_harness = WriteSonicHarness()
 
     # Begin the prompt injection process
     chromosome = inject(content_manipulation, application_harness)

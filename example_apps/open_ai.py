@@ -27,8 +27,6 @@ class OpenAIHarness(Harness):
 
     def send_message(self, user_message: str) -> Any:
         try:
-            print(f"[OpenAIHarness] Sending prompt to OpenAI ({self.model})")
-
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
