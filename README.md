@@ -1,6 +1,34 @@
+## Table of Contents
+
+- [Introduction of HouYi](#HouYi)
+- [Simulate GROUP 8s Prompt Injection](#Group8)
+- [Setup](#setup)
+- [Demo](#demo)
+- [More Examples](#more-examples)
+- [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
+
+
+
 # HouYi
 
-This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. In this forked repository we have added our own harness and custom prompt injection test cases to extend the original experiments and explore new attack strategies against LLM-integrated applications. We will also list how to run our project segment for the Computer Systems Class(CS4371) at Texas State University Spring 2025 semester. 
+This is the replication package for the paper "Prompt Injection attack against LLM-integrated Applications" in [arxiv](https://arxiv.org/abs/2306.05499). In this repository, we provide the source code of HouYi, a framework that automatically injects prompts into LLM-integrated applications to attack them. We also provide a demo script that simulates a LLM-integrated application and demonstrates how to use HouYi to attack it. Besides, you can use HouYi to attack real-world LLM-integrated applications by writing your own harness and attack intention. Related Work
+In addition to replicating and extending the HouYi framework from Prompt Injection attack against LLM-integrated Applications, our project draws inspiration from and builds upon the findings in a related study:
+
+"Not what you’ve signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection" by Greshake et al. [arXiv:2302.12173v2](https://arxiv.org/abs/2302.12173).
+
+This paper introduces and categorizes a novel class of Indirect Prompt Injection (IPI) attacks, which allow adversaries to control LLM-integrated applications remotely by injecting prompts into data sources likely to be retrieved at inference time. It identifies real-world vulnerabilities, provides a threat taxonomy, and demonstrates practical attacks on systems like Bing Chat and GitHub Copilot.
+
+# How This Relates to Our Work
+
+Our fork of HouYi extends its prompt injection capabilities to simulate indirect and user-agnostic injection vectors inspired by the scenarios outlined in Greshake et al.’s work. By integrating these insights:
+
+We've customized a test that simulate passive and hidden retrieval-based injections.
+
+We've created test cases that mimic encoded prompts, email-based attacks, and memory-persistent payloads described in the IPI taxonomy.
+
+Our tests explore how systems can be compromised even when no direct input is given by a malicious user—aligning with the indirect threat model.
+
+Together, both papers serve as the foundation for our exploration of prompt injection risks in LLM-integrated applications. This forms the basis of our semester project for CS4371: Computer Systems at Texas State University, Spring 2025.
 
 ## Citation
 Please cite the original paper if you use their code in your research:
@@ -15,16 +43,31 @@ Please cite the original paper if you use their code in your research:
 }
 ```
 
-## Table of Contents
 
-- [Introduction of HouYi](#HouYi)
-- [Setup](#setup)
-- [Demo](#demo)
-- [More Examples](#more-examples)
-- [Write Your Own Prompt Injection](#write-your-own-prompt-injection)
+
+## Group8
+Please install the following packages in the .zip and make sure you have Python 3.8+ installed.
+Once the .zip folder has been downloaded you must change the directory to the project folder directory:
+```bash
+cd YOUR-PATH-TO-HouYi-CS4371-Project-master
+```
+Next install requirements in the command prompt:
+```bash
+pip install -r requirements.txt
+```
+Navigate to the project folder and locate the .env file. Add API keys to the the .env file and save.
+```bash
+PAREA_API_KEY = ''
+BOTSONIC_API_KEY=''
+OPENAI_API_KEY=''
+```
+Finally run the prompt injection in command prompt:
+```bash
+python write_sonic_main.py
+```
 
 ## Setup
-Please install the following packages and make sure you have Python 3.8+ installed:
+Please install the following packages(if you haven't already) and make sure you have Python 3.8+ installed:
 ```bash
 pip install -r requirements.txt
 ```
