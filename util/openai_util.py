@@ -7,7 +7,7 @@ load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_key)
 
-def completion_with_chatgpt(text: str, model: str = "gpt-3.5-turbo") -> str:
+def completion_with_chatgpt(text: str, model: str = "gpt-4o") -> str:
     response = client.chat.completions.create(
         model=model,
         messages=[

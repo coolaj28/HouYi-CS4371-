@@ -4,22 +4,25 @@ import pathlib
 import loguru
 import openai
 
+from iterative_prompt_optimization import IterativePromptOptimizer
 from constant.chromosome import Chromosome
 from harness.base_harness import Harness
-from harness.demo_translator_harness import TranslatorHarness
+
+#intentions are the malicious prompt objective used for testing.
 from intention.base_intention import Intention
-from intention.content_manipulation import ContentManipulation
-from iterative_prompt_optimization import IterativePromptOptimizer
+from intention.content_manipulation import ContentManipulation 
+from intention.information_gathering import InformationGathering
+from intention.prompt_leakage import PromptLeakage
+from intention.spam_generation import SpamGeneration
+from intention.write_code import WriteCode
+
+#example_apps are the LLM services or application harnesses used for testing.
+from example_apps.open_ai import OpenAIHarness
+from example_apps.write_sonic import WriteSonicHarness
+from example_apps.forefront_ai import ForefrontHarness
+from example_apps.parea_ai import PareaHarness
 
 logger = loguru.logger
-
-# Load config file from root path
-config_file_path = pathlib.Path("./config.json")
-# Read config file
-config = json.load(open(config_file_path))
-
-# Initialize OpenAI API key
-openai.api_key = config["openai_key"]
 
 # Define constants for optimization process
 max_iteration = 50
@@ -45,7 +48,7 @@ def inject(intention: Intention, application_harness: Harness) -> Chromosome:
 def main():
     # Initialize prompt injection intention and harness
     content_manipulation = ContentManipulation()
-    application_harness = TranslatorHarness()
+    application_harness = OpenAIHarness()
 
     # Begin the prompt injection process
     chromosome = inject(content_manipulation, application_harness)
