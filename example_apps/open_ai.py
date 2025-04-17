@@ -48,5 +48,5 @@ class OpenAIHarness(Harness):
             return None
 
         message_content = response.choices[0].message.content
-        print(f"[OpenAIHarness] Model response: {message_content}")
+        print(f"Model response: {message_content}")
         return message_content
